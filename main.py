@@ -23,10 +23,7 @@ def get_issues(token):
 
 
 def cache_issues():
-    token = os.environ.get("NYSS_TOKEN", None)
-    if not token:
-        print(f"wrong token: {token}")
-        return 1
+    token = "YOUR TOKEN"
     issues = get_issues(token)
     with open('cache.json', 'w', encoding="utf-8") as f:
         f.write(json.dumps(issues))
